@@ -3,12 +3,6 @@
   user-select: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-image: url("./images/Image1.png");
   background-repeat: round;
@@ -23,17 +17,42 @@
 }
 
 .SearchBar {
-  width: 500px;
+  width: 450px;
   height: 35px;
   border-radius: 25px;
   border-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Cards {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.singleCards {
+  flex: 0 0 calc(20% - 60px);
+  max-width: calc(20% - 60px);
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  /* background-color: #282c34; */
+}
+@media (max-width: 1150px) {
+  .singleCards {
+    flex: 0 0 calc(25% - 50px);
+    max-width: calc(25% - 50px);
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 850px) {
+  .singleCards {
+    flex: 0 0 calc(33.3% - 50px);
+    max-width: calc(33.3% - 50px);
+  }
+}
+@media (max-width: 650px) {
+  .singleCards {
+    flex: 0 0 calc(50% - 50px);
+    max-width: calc(50% - 50px);
   }
 }
